@@ -1,0 +1,62 @@
+# ------------------------------------------------------------
+# WeCare / CareSync Databricks repo - .gitignore
+# ------------------------------------------------------------
+
+# Databricks assets not supported in Git folders
+# (Genie spaces fail on `git add` with "Operation not supported")
+*.geniespace.json
+
+# Databricks local / CLI / bundle artifacts
+.databricks/
+.bundle/
+*.dbc
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local config (never commit credentials)
+.env
+.env.*
+*.pem
+*.key
+secrets*.json
+
+# Local Spark / MLflow outputs
+spark-warehouse/
+metastore_db/
+derby.log
+mlruns/
+
+# Logs and temp files
+*.log
+logs/
+tmp/
+*.tmp
+
+# Office lock files (keep the STTM .xlsx itself tracked)
+~$*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
